@@ -1,6 +1,7 @@
 {
   "name": "dantweb/atomizer",
   "description": "A project utilizing PHPUnit and Symfony components",
+  "license": "CC",
   "type": "project",
   "require": {
     "php": "^8.2"
