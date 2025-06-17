@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Dantweb\Atomizer\AtomizerModel;
 
 use Dantweb\Atomizer\DataPassport\DataPassport;
-use Dantweb\Ecommwatch\Framework\Exception\ECWatchException;
+use Dantweb\Ecommwatch\Framework\Exception\EcwException;
 
 class Atom extends AbstractModel
 {
@@ -34,7 +34,7 @@ class Atom extends AbstractModel
     public function setValue($data): void
     {
         if (empty($this->fieldType)) {
-            throw new ECWatchException(
+            throw new EcwException(
                 sprintf(
                     'Atomizer\Atom::setField Error: Type not set for field %s. This data : %s ',
                     $this->fieldName,
@@ -80,7 +80,7 @@ class Atom extends AbstractModel
             print_r($data, true)
         );
 
-        throw new ECWatchException($msg);
+        throw new EcwException($msg);
     }
 
     public function getName(): string
